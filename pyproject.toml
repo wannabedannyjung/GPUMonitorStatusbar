@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GPUMonitorStatusbar"
+version = "0.1.0"
+description = "Always-on-top NVidia Multiple GPU 's Utilization Watt Temperature/CPU/NET monitor status bar widget"
+authors = [
+  { name="danny.jung", email="danny.jung@samsung.com" }
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "psutil>=5.9",
+    "tkinter; platform_system != 'Linux'",
+]
+
+[project.scripts]
+GPUMonitorStatusbar = "GPUMonitorStatusbar.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/wannabedannyjung/GPUMonitorStatusbar"
+Source = "https://github.com/wannabedannyjung/GPUMonitorStatusbar"
+Tracker = "https://github.com/wannabedannyjung/GPUMonitorStatusbar/issues"
